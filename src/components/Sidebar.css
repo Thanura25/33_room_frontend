@@ -1,0 +1,337 @@
+.dashboard-shell:has(> .room-sidebar) {
+  --room-sidebar-width: 260px;
+  display: block;
+  width: 100%;
+  min-height: 100dvh;
+  margin: 0;
+  padding: 0;
+  background: #f8fafc;
+}
+
+.dashboard-shell:has(> .room-sidebar.is-collapsed) {
+  --room-sidebar-width: 76px;
+}
+
+.dashboard-shell:has(> .room-sidebar) > .workspace {
+  min-width: 0;
+  min-height: 100dvh;
+  margin-left: var(--room-sidebar-width);
+  padding: 0 32px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #f8fafc;
+  transition: margin-left 200ms ease;
+}
+
+/* Sidebar Shell */
+.room-sidebar {
+  position: fixed;
+  z-index: 100;
+  inset: 0 auto 0 0;
+  display: flex;
+  flex-direction: column;
+  width: var(--room-sidebar-width, 260px);
+  height: 100dvh;
+  background: #ffffff;
+  border-right: 1px solid #e2e8f0;
+  padding: 20px 14px 16px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 transparent;
+  transition: width 200ms ease;
+}
+
+/* Brand Header */
+.room-sidebar__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px 18px;
+  min-height: 48px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.room-sidebar__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.room-sidebar__logo-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  flex-shrink: 0;
+}
+
+.room-sidebar__logo-badge .ui-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.room-sidebar__brand-text-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.room-sidebar__brand-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.03em;
+}
+
+.room-sidebar__badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  line-height: 1.3;
+}
+
+.room-sidebar__badge.is-admin {
+  background: #e0e7ff;
+  color: #3730a3;
+  border: 1px solid #c7d2fe;
+}
+
+.room-sidebar__badge.is-member {
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.room-sidebar__collapse-btn {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 150ms ease;
+}
+
+.room-sidebar__collapse-btn:hover {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+.room-sidebar__collapse-btn .ui-icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* Nav Items */
+.room-sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 0;
+  flex: 1;
+}
+
+.room-sidebar__items {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Sidebar Nav Item Button - Modern Clean SaaS */
+.room-sidebar__nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: 40px;
+  padding: 0 12px;
+  border: none !important;
+  outline: none !important;
+  border-radius: 9px;
+  background: transparent;
+  color: #475569;
+  font-size: 0.84rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: none !important;
+  transition: all 140ms ease;
+  user-select: none;
+}
+
+.room-sidebar__nav-item:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.room-sidebar__nav-icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  transition: color 140ms ease;
+}
+
+.room-sidebar__nav-item:hover .room-sidebar__nav-icon {
+  color: #2563eb;
+}
+
+/* Active State */
+.room-sidebar__nav-item.is-active {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.22) !important;
+}
+
+.room-sidebar__nav-item.is-active .room-sidebar__nav-icon {
+  color: #ffffff !important;
+}
+
+.room-sidebar__nav-label {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  letter-spacing: -0.01em;
+}
+
+/* Sidebar Footer User Pill */
+.room-sidebar__footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.room-sidebar__user-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 8px 10px;
+}
+
+.room-sidebar__user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #e0e7ff;
+  color: #3730a3;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.room-sidebar__user-meta {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-sidebar__user-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0f172a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.room-sidebar__user-email {
+  font-size: 0.7rem;
+  color: #64748b;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.room-sidebar__logout-btn {
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  padding: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 120ms ease;
+}
+
+.room-sidebar__logout-btn:hover {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.room-sidebar__logout-btn .ui-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* Collapsed Mode */
+.room-sidebar.is-collapsed {
+  padding: 18px 8px 16px;
+}
+
+.room-sidebar.is-collapsed .room-sidebar__header {
+  flex-direction: column;
+  gap: 12px;
+  padding: 2px 0 16px;
+}
+
+.room-sidebar.is-collapsed .room-sidebar__nav-item {
+  justify-content: center;
+  padding: 0;
+}
+
+.room-sidebar.is-collapsed .room-sidebar__section {
+  gap: 4px;
+}
+
+/* Mobile responsive */
+@media (max-width: 900px) {
+  .dashboard-shell:has(> .room-sidebar) > .workspace {
+    margin-left: 0;
+    padding: 0 16px 32px;
+  }
+
+  .room-sidebar {
+    transform: translateX(-100%);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .room-sidebar.is-mobile-open {
+    transform: translateX(0);
+  }
+
+  .room-sidebar__backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: rgba(15, 23, 42, 0.35);
+    backdrop-filter: blur(2px);
+  }
+}

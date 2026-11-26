@@ -1,0 +1,71 @@
+.login-page { display: grid; grid-template-columns: 1fr 1fr; gap: 7vw; max-width: 1200px; margin: auto; min-height: 100vh; padding: 64px 40px; align-items: center; color: #254d33; }
+.login-intro { width: 100%; max-width: 520px; }
+.login-brand { display: block; margin-bottom: 52px; font-size: 2rem; font-weight: 800; letter-spacing: -.08em; }
+.login-brand > span { margin-left: 8px; font-weight: 400; }
+.login-intro h1 { font-size: clamp(2.4rem, 5vw, 4.6rem); line-height: 1.12; letter-spacing: -.06em; margin: 16px 0 24px; }
+.login-intro > p:not(.panel-kicker) { color: #62786a; line-height: 1.8; max-width: 390px; }
+.login-steps { display: grid; gap: 15px; padding-left: 20px; margin-top: 32px; color: #466651; }
+.login-card { width: 100%; max-width: 440px; padding: 36px; border: 1px solid #dce7de; border-radius: 24px; background: #fff; box-shadow: 0 16px 60px #173d2810; }
+.login-card h2 { margin: 0; font-size: 1.7rem; letter-spacing: -.04em; }
+.login-card > p { line-height: 1.7; color: #657a6c; }
+.login-card fieldset { display: grid; gap: 20px; padding: 0; margin: 0; border: 0; min-width: 0; }
+.login-card .primary-button { margin-top: 4px; background: #226d47; border-radius: 999px; color: #fff; }
+.login-error { color: #a33b37; font-size: .85rem; line-height: 1.6; }
+.login-error button { margin-top: 10px; }
+button:disabled { cursor: not-allowed; opacity: .55; }
+.billing-flow { display: grid; gap: 22px; min-width: 0; }
+.billing-flow-steps { display: flex; flex-wrap: wrap; gap: 14px 30px; padding: 6px 2px; color: #476951; font-size: .85rem; }
+.billing-flow-steps > span { display: flex; align-items: center; gap: 10px; }
+.billing-flow-steps b { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #e5f0e8; color: #276442; font-size: .75rem; }
+.bill-fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.bill-fieldset:disabled input { color: #5e7565; background: #f5f8f5; }
+.bill-amount-fields { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.selection-count { padding: 8px 14px; border-radius: 99px; background: #eaf3ec; color: #326246; white-space: nowrap; font-size: .8rem; }
+.selection-actions { display: flex; gap: 10px; margin-bottom: 16px; }
+.resident-selection { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.resident-choice { display: flex; align-items: center; gap: 12px; padding: 16px; border: 1px solid #e1e8e3; border-radius: 12px; cursor: pointer; }
+.resident-choice.is-selected { border-color: #75a587; background: #f0f7f2; }
+.resident-choice input, .send-toggle input { flex: 0 0 18px; width: 18px; height: 18px; accent-color: #226d47; }
+.resident-choice > span { min-width: 0; flex: 1; }
+.resident-choice strong { display: block; font-size: .88rem; overflow-wrap: anywhere; }
+.resident-choice small { display: block; margin-top: 4px; color: #698172; font-size: .75rem; overflow-wrap: anywhere; }
+.resident-choice .former-resident { font-size: .65rem; }
+.meter-details { border-top: 1px solid #e4ece6; padding-top: 18px; }
+.meter-details summary { color: #4e715b; cursor: pointer; font-size: .85rem; }
+.meter-details[open] summary { margin-bottom: 20px; }
+.meter-details > .field { margin-top: 18px; }
+.split-review { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 24px; border-radius: 16px; background: #f1f7f2; }
+.split-review > div > span { color: #53725e; font-size: .8rem; }
+.split-review strong { display: block; margin: 10px 0; color: #205438; font-size: 1.8rem; }
+.split-review strong small { font-size: .8rem; font-weight: 400; }
+.split-review p { color: #607b6a; font-size: .78rem; line-height: 1.7; }
+.share-preview { list-style: none; padding: 0; display: grid; gap: 10px; margin-top: 18px; max-height: 240px; overflow: auto; }
+.share-preview li { display: flex; justify-content: space-between; gap: 15px; color: #496651; font-size: .8rem; }
+.share-preview b { white-space: nowrap; }
+.whatsapp-preview { padding: 20px; border-radius: 14px; background: #e2eee4; }
+.whatsapp-preview > p { color: #304d39; margin-top: 14px; padding: 16px; border-radius: 0 12px 12px; background: #fff; box-shadow: 0 2px 5px #173d2810; line-height: 1.9; }
+.bill-submit-area { display: grid; gap: 16px; }
+.send-toggle { display: flex; align-items: center; gap: 12px; color: #305d40; font-size: .88rem; cursor: pointer; }
+.delivery-note, .bill-lock-note { padding: 13px 16px; border: 1px solid #e7ddba; border-radius: 10px; background: #fffbef; color: #7a642d; font-size: .8rem; line-height: 1.7; }
+.bill-lock-note { margin-bottom: 22px; border-color: #dbe8de; background: #f0f7f2; color: #4c7059; }
+.message-panel .delivery-note { margin-bottom: 18px; }
+.table-secondary, .message-error { display: block; margin-top: 6px; font-size: .72rem; line-height: 1.6; }
+.message-error { max-width: 250px; color: #a0443e; }
+.message-body { min-width: 145px; max-width: 340px; font-size: .8rem; }
+.message-body summary { cursor: pointer; color: #2e7250; }
+.message-body p { margin-top: 12px; line-height: 1.8; }
+.whatsapp-message-text { white-space: pre-wrap; overflow-wrap: anywhere; }
+.whatsapp-message-text strong { display: inline; margin: 0; color: inherit; font-size: inherit; font-weight: 700; }
+.whatsapp-preview > small { display: block; margin-top: 12px; color: #53725e; font-size: .7rem; line-height: 1.7; }
+.workspace .status-pill.sent { color: #3f7752; background: #eaf5ed; }
+.workspace .status-pill.failed, .workspace .status-pill.unknown { color: #a0443e; background: #fff0ed; }
+.workspace .status-pill.sending { color: #526d8b; background: #edf3fa; }
+@media (max-width: 1000px) { .bill-amount-fields { grid-template-columns: repeat(2, minmax(0, 1fr)); } .split-review { grid-template-columns: 1fr; } }
+@media (max-width: 680px) {
+  .login-page { grid-template-columns: 1fr; padding: 28px 18px; gap: 28px; }
+  .login-brand { margin-bottom: 24px; }.login-intro h1 { font-size: 2.5rem; }.login-steps { display: none; }
+  .login-card { max-width: none; padding: 25px; }.login-intro { max-width: none; }
+  .resident-selection, .bill-amount-fields { grid-template-columns: 1fr; }
+  .billing-flow-steps { gap: 12px; font-size: .72rem; }.billing-flow-steps b { width: 22px; height: 22px; }
+  .split-review { padding: 16px; }.message-panel .panel-head { flex-wrap: wrap; }
+}
